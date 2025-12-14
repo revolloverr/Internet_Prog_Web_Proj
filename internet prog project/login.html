@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="script.js"></script>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 align="center">Login</h1>
+	</header>
+	<form action="action_page.php" method="post" align="center">
+		<div class="login_container">
+			<label id="usernamelabel"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="username" id="username" required>
+			</br>
+
+			<label id="passwordlabel"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" id="password" required>
+			</br>
+			<button type="submit"><a href="home.html">Login</button>
+			<!-- gonna add cookies below when i figure it out -->
+			<label>
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+</form>

@@ -1,0 +1,54 @@
+/* login page css */
+
+form {
+	border: 3px solid #f1f1f1;
+}
+
+.login_container > input{
+	margin: 5px
+}
+
+/*homepage css*/
+
+.mainlogo h1{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.mainlogo img{
+	display: flex;
+}
+
+img{
+	height: 15%;
+	width: 15%;
+	float: left;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: blue;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	display: block;
+	color: yellow;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav ul li form{
+	display: block;
+	color: yellow;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
