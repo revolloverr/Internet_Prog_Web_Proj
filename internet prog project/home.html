@@ -7,49 +7,53 @@
     <title>The Basics HomePage</title>
     <link rel="stylesheet" href="Resources/CSS/home.css">
 </head>
-<body>
+<body onload="getXML();">
     <header class="navbar">
       <div class="nav-left">
         <a href="home.html" class="logo">
-          <img
-            src="Resources/Images/Icons/Logo-Full.png"
-            alt="Logo - The Basics"
-            class="logo-img"
-          />
+          <img src="Resources/Images/Icons/amazoom.png" alt="Logo - The Basics"class="logo-img"/>
         </a>
       </div>
 
       <nav class="nav-center">
-        <a href="home.html">home</a>
-        <a href="products.html">products</a>
-        <a href="about.html">about</a>
+        <a href="home.html">Home</a>
+        <a href="category.html">Shop by Category</a>
+        <a href="about.html">About</a>
       </nav>
 
       <div class="nav-right">
         <input type="text" placeholder="search" class="search-input" />
 
         <a href="cart.html" class="icon">
-          <img
-            src="Resources/Images/Icons/Cart.png"
-            alt="Cart"
-            class="icon-img"
-          />
+          <img src="Resources/Images/Icons/Cart.png" alt="Cart" class="icon-img"/>
         </a>
         <a href="profile.html" class="icon">
-          <img
-            src="Resources/Images/Icons/Profile.png"
-            alt="Profile"
-            class="icon-img"
-          />
+          <img src="Resources/Images/Icons/Profile.png"alt="Profile" class="icon-img" />
         </a>
       </div>
     </header>
+	<br>
+	<br>
+	<br>
+
     <main>
-        <section class="homebody">
-            <h2>Im trying to make this work bruv</h2>
-            
+        <section class="hero-section">
+            <div class="hero-image">
+				<img src="elect.jpg">	
+			<div class="hero-text">
+				<h1>Don't miss out on our newest electronics now!</h1>
+				<p>Only the brightest and the best</p>
+				<button>Shop Now</button>
+			</div>
+			</div>   
         </section>
     </main>
+	<aside>
+           <section class="category-display">
+                <h2>Categories</h2>
+                <ul id="category-list"></ul>
+           </section>
+    </aside>
     <footer>
         <p>placeholder</p>
 		<!-- category links, socials icons,  contact info, and a form -->

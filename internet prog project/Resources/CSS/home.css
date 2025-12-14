@@ -1,20 +1,22 @@
-/* reset some default styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
-/* navbar container */
+
+
 .navbar {
   width: 100%;
-  height: 70px; /* height of the top bar */
-  background-color: #1e1e1e; /* dark background */
+  height: 70px; 
+  background-color: #121B42; 
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  position: fixed; /* stays at top */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -22,19 +24,19 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* left side - logo */
+
 .nav-left .logo-img {
-  height: 80px; /* logo size */
+  height: 80px; 
 }
 
-/* center nav links */
+
 .nav-center {
   display: flex;
   gap: 25px;
 }
 
 .nav-center a {
-  color: white;
+  color: #E3BD5B;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -42,17 +44,16 @@
 }
 
 .nav-center a:hover {
-  color: #f0a500; /* highlight on hover */
+  color: white; 
 }
 
-/* right side - search and icons */
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* search input */
 .search-input {
   padding: 5px 10px;
   border-radius: 5px;
@@ -60,7 +61,6 @@
   outline: none;
 }
 
-/* icons */
 .icon-img {
   height: 30px;
   width: 30px;
@@ -70,4 +70,26 @@
 
 .icon-img:hover {
   transform: scale(1.1);
+}
+
+body{
+	background-color: #D1D0C2;	
+}
+
+.hero-image img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
