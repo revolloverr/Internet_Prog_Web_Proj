@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="script.js"></script>
-    <title>AmaZoom HomePage</title>
-    <link rel="stylesheet" href="style.css">
+	<script src="Resources/JS/script.js"></script>
+    <title>The Basics HomePage</title>
+    <link rel="stylesheet" href="Resources/CSS/home.css">
 </head>
 <body>
-    <header>
-		<div class="mainlogo">
-			<img src="Amazoomph.png" alt="amazoomlogo">
-		</div>
-        <nav>
-		</br>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About/Contact</a></li>
-                <li><a href="category.html">Shop by Category</a></li>
-				<li><form action="/search_results" method="get">
-					<label id="searchlabel">Search the site:</label>
-					<input type="search" id="amazoom-search" name="searchbar" placeholder="Search an item..." />
-					<button type="submit">Search</button>
-				</li>
-</form>
-            </ul>
-        </nav>
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="home.html" class="logo">
+          <img
+            src="Resources/Images/Icons/Logo-Full.png"
+            alt="Logo - The Basics"
+            class="logo-img"
+          />
+        </a>
+      </div>
+
+      <nav class="nav-center">
+        <a href="home.html">home</a>
+        <a href="products.html">products</a>
+        <a href="about.html">about</a>
+      </nav>
+
+      <div class="nav-right">
+        <input type="text" placeholder="search" class="search-input" />
+
+        <a href="cart.html" class="icon">
+          <img
+            src="Resources/Images/Icons/Cart.png"
+            alt="Cart"
+            class="icon-img"
+          />
+        </a>
+        <a href="profile.html" class="icon">
+          <img
+            src="Resources/Images/Icons/Profile.png"
+            alt="Profile"
+            class="icon-img"
+          />
+        </a>
+      </div>
     </header>
     <main>
         <section class="homebody">
             <h2>Im trying to make this work bruv</h2>
-            
+            <textarea></textarea>
         </section>
     </main>
     <footer>
