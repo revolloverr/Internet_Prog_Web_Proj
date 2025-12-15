@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="Resources/JS/script.js"></script>
-    <title>The Basics HomePage</title>
+	  <script src="Resources/JS/script.js"></script>
+    <script src="Resources/JS/products.js"></script>
+    <title>Amazoom</title>
     <link rel="stylesheet" href="Resources/CSS/home.css">
 </head>
 <body onload="getXML();">
@@ -47,17 +48,56 @@
 			</div>
 			</div>   
         </section>
-    </main>
-	<aside>
-           <section class="category-display">
+        <section style="margin-top:30px;" class="featured-products">
+          <h2>Featured Products</h2>
+          <div class="grid" id="featuredProducts">
+          <p>Loading products...</p>
+          </div>
+        </section>
+        <aside>
+            <section class="card-category-section">
                 <h2>Categories</h2>
-                <ul id="category-list"></ul>
-           </section>
+                <div class="category-grid"><ul>
+                <li><a class="category-option" href="category.html?category=Electronics">Electronics</a></li>
+                <li><a class="category-option" href="category.html?category=Clothing">Clothing</a></li>
+                <li><a class="category-option" href="category.html?category=Home%20%26%20Kitchen">Home & Kitchen</a></li>
+                <li><a class="category-option" href="category.html?category=Automotive">Automotive</a></li>
+                </ul>
+                </div>
+            </section>
     </aside>
+  </br>
+  <br>
+	<br>
+	<br>
+    </main>
+	
     <footer>
-        <p>placeholder</p>
-		<!-- category links, socials icons,  contact info, and a form -->
+        <p>contact us via AmazoomCS@yahoo.com or our socials</p>
+		<!-- category links, socials icons,  contact info, and a form----------- its done now-->
+		<div class="socials-icons">
+			<a href="error404.html" class="icon">
+			<img src="Resources/Images/Icons/xlogo.png" alt="xtwitterlogo" class="icon-img"/>
+			</a>
+			<a href="error404.html" class="icon">
+			<img src="Resources/Images/Icons/instalogo.png"alt="instalogo" class="icon-img" />
+			</a>
+			<a href="error404.html" class="icon">
+			<img src="Resources/Images/Icons/fblogo.png"alt="fblogologo" class="icon-img" />
+			</a>
+			<p>feel free to also sign up to our newsletter!<p>
+			<form>
+			<input type="text" placeholder="Enter your email address..." class="newslettersignup">
+			<button type="submit">sign up</button>
+			</form>
+		</div>
+    <div>
+      <h4>Categories</h4>
+      <a href="category.html?category=Electronics">Electronics</a>
+      <a href="category.html?category=Clothing">Clothing</a>
+      <a href="category.html?category=Home%20%26%20Kitchen">Home & Kitchen</a>
+      <a href="category.html?category=Automotive">Automotive</a>
+    </div>
     </footer>
-    
 </body>
 </html>
