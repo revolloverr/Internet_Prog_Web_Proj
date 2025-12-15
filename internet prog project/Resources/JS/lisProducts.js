@@ -134,7 +134,7 @@ function renderProducts(products) {
         <img src="${p.image}" alt="${p.name}">
         <h4>${p.name}</h4>
         <p>$${Number(p.price).toFixed(2)}</p>
-        <a href="product.html?id=${p.id}">View</a>
+        <a href="pdp.html?id=${p.id}">View</a>
       </div>
     `;
   });

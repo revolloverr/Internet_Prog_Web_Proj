@@ -48,7 +48,7 @@ function createProductCard(product) {
       <h3>${product.name}</h3>
       <p><strong>$${Number(product.price).toFixed(2)}</strong></p>
       <p style="font-size:12px;color:#666;">${product.category}</p>
-      <a href="product.html?id=${product.id}" class="btn">View</a>
+      <a href="pdp.html?id=${product.id}" class="btn">View</a>
     </div>
   `;
 }

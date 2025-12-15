@@ -462,6 +462,10 @@ h2 {
   text-decoration: none;
 }
 
+.product-card a {
+  color: #e3bd5b;
+}
+
 .pagination {
   display: flex;
   flex-wrap: wrap;
