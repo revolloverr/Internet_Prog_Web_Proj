@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="Resources/JS/script.js"></script>
     <script src="Resources/JS/products.js"></script>
     <title>Amazoom</title>
     <link rel="stylesheet" href="Resources/CSS/home.css" />
     <script src="Resources/JS/layout.js"></script>
+
+    <script src="Resources/JS/Testing.js"></script>
   </head>
-  
+
   <body onload="getXML();">
     <main>
       <section class="hero-section">
@@ -22,13 +26,20 @@
           </div>
         </div>
       </section>
+
+      <section id="categories" class="category-landing" >
+        <h2>Categories</h2>
+        <div id="categoryGrid" class="category-grid"></div>
+      </section>
+
       <section style="margin-top: 30px" class="featured-products">
         <h2>Featured Products</h2>
         <div class="grid" id="featuredProducts">
           <p>Loading products...</p>
         </div>
       </section>
-      <aside></aside>
+      
+      
     </main>
   </body>
 </html>

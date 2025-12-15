@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="Resources/CSS/home.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="Resources/JS/lisProducts.js"></script>
+    <script src="Resources/JS/Layout.js"></script>
+    <script src="Resources/JS/Testing.js"></script>
+  </head>
+  <body onload="getXML();">
+    <main>
+      <div class="container-product">
+        <aside class="sidebar">
+          <h3>FILTERS</h3>
+
+          <div class="filter-group">
+            <div class="filter-header">
+              <span>Category</span>
+              <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="filter-options" id="category-filters"></div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-header">
+              <span>Price Range</span>
+              <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="filter-options">
+              <div class="price-range-inputs">
+                <span>$</span>
+                <input
+                  type="number"
+                  id="min-price"
+                  value="0"
+                  min="0"
+                  placeholder="Min"
+                />
+                <span>-</span>
+                <input
+                  type="number"
+                  id="max-price"
+                  value="1000"
+                  min="0"
+                  placeholder="Max"
+                />
+                <button id="apply-price">›</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="products-section">
+          <div class="sort-bar">
+            <label for="sort-select">Sort by:</label>
+            <select id="sort-select">
+              <option value="az">Alphabetical (A - Z)</option>
+              <option value="za">Alphabetical (Z - A)</option>
+              <option value="price-low">Price (Low to High)</option>
+              <option value="price-high">Price (High to Low)</option>
+            </select>
+          </div>
+          <div id="products-container" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading products...
+          </div>
+
+          <div class="pagination" id="pagination" style="display: none"></div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
