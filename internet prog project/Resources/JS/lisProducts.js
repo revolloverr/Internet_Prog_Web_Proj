@@ -131,7 +131,7 @@ function renderProducts(products) {
   pageItems.forEach(p => {
     container.innerHTML += `
       <div class="product-card">
-        <img src="${p.image}" alt="${p.name}">
+        <img src="${p.image}?id=${p.id}" alt="${p.name}">
         <h4>${p.name}</h4>
         <p>$${Number(p.price).toFixed(2)}</p>
         <a href="pdp.html?id=${p.id}">View</a>

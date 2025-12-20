@@ -124,7 +124,7 @@ body {
 }
 
 .hero-text * {
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .hero-text h1 {
@@ -133,7 +133,17 @@ body {
 }
 
 .hero-text button {
-  padding: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #121b42;
+  color: #e3bd5b;
+  border-radius: 4px;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.hero-text button:hover {
+  background-color: #0d1433;
+  transform: scale(1.05);
 }
 
 footer {
@@ -532,7 +542,7 @@ h2 {
   line-height: 1.6;
 }
 
-.error-link {
+.error-link{
   text-decoration: none;
   padding: 10px 20px;
   background-color: #121b42;
