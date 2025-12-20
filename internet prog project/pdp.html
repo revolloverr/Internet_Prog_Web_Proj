@@ -1,18 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="Resources/JS/script.js"></script>
-    <script src="Resources/JS/products.js"></script>
-    <title>Product Detail</title>
-    <link rel="stylesheet" href="Resources/CSS/home.css" />
-    <script src="Resources/JS/Layout.js"></script>
-  </head>
-  <body onload="getXML();">
-    <main>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Product Detail</title>
+
+  <link rel="stylesheet" href="Resources/CSS/home.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="Resources/JS/productdetails.js" defer></script>
+  <script src="Resources/JS/products.js" defer></script>
+  <script src="Resources/JS/Layout.js" defer></script>
+</head>
+<br>
+<br>
+<br>
+<body>
+<main class="product-detail-container">
+
+      <div class="product-layout">
+        
+        <div class="product-images-section">
+          <div class="main-image">
+            <img id="main-product-image" src="" alt="Product" />
+          </div>
+        </div>
+
+        
+        <div class="product-info-section">
+          <h1 class="product-title" id="product-title">Loading...</h1>
+          <div class="size-section">
+          <h3>Size</h3>
+            <div id="size-options"></div>
+            </div>
+          <div class="product-rating">
+            <div class="stars" id="product-stars"></div>
+            <span class="rating-text" id="rating-text"></span>
+          </div>
+
+
+
+          <div class="product-price" id="product-price">$0.00</div>
+
+          <div class="product-meta">
+            <div class="meta-item">
+              <span class="meta-label">SKU:</span>
+              <span class="meta-value" id="product-sku">-</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Availability:</span>
+              <span class="meta-value availability" id="product-availability"
+                >In Stock</span
+              >
+            </div>
+          </div>
+
+          <div class="description-section">
+            <h3 class="section-heading">Description</h3>
+            <div class="description-content" id="product-description">
+              <p>Loading product description...</p>
+            </div>
+          </div>
+
+          <div class="quantity-section">
+            <label class="quantity-label">Quantity</label>
+            <div class="quantity-selector">
+              <button class="qty-btn" id="qty-decrease">-</button>
+              <input
+                type="number"
+                id="quantity-input"
+                value="1"
+                min="1"
+                max="999"
+              />
+              <button class="qty-btn" id="qty-increase">+</button>
+            </div>
+          </div>
+
+          <button class="add-to-cart-btn" id="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+      <section class="reviews-section">
+        <h2 class="section-title">Customer Reviews</h2>
+        <div class="reviews-list" id="reviews-list">
+        </div>
+      </section>
+
+      <section class="related-products-section">
+        <h2 class="section-title">Related Products</h2>
+        <div class="related-products-grid" id="related-products">
+        </div>
+      </section>
+</main>
+</body>
 </html>
