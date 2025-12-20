@@ -46,6 +46,13 @@ window.addEventListener("DOMContentLoaded", () => {
       updateAuthLinks();
       window.addEventListener('authChanged', updateAuthLinks);
 
+      // load search behavior after navbar is inserted
+      try{
+        const s = document.createElement('script');
+        s.src = 'Resources/JS/search.js';
+        document.body.appendChild(s);
+      }catch(e){/* ignore */}
+
     }).catch(()=>{/* ignore */});
 
   fetch("Resources/Layout/footer.html")

@@ -8,9 +8,21 @@ let selectedCategory = null;
 let minPrice = 0;
 let maxPrice = Infinity;
 let sortMode = "az";
+let searchQuery = null;
+
+function escapeRegExp(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+
+function highlightText(text, query){
+  if(!query) return (text||'');
+  try{
+    const re = new RegExp('('+escapeRegExp(query)+')','ig');
+    return (text||'').replace(re, '<mark class="search-highlight">$1</mark>');
+  }catch(e){ return text; }
+}
 
 $(document).ready(function () {
   selectedCategory = getCategoryFromURL();
+  searchQuery = new URLSearchParams(window.location.search).get('search');
   loadProducts();
   loadCategoryFilters();
 
@@ -98,6 +110,13 @@ function applyFilters(page) {
     return true;
   });
 
+  if(searchQuery){
+    const q = searchQuery.toLowerCase();
+    filtered = filtered.filter(p => {
+      return (p.name && p.name.toLowerCase().includes(q)) || (p.description && p.description.toLowerCase().includes(q));
+    });
+  }
+
   if (sortMode === "az") {
     filtered.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortMode === "za") {
@@ -132,7 +151,7 @@ function renderProducts(products) {
     container.innerHTML += `
       <div class="product-card">
         <img src="${p.image}?id=${p.id}" alt="${p.name}">
-        <h4>${p.name}</h4>
+        <h4>${highlightText(p.name, searchQuery)}</h4>
         <p>$${Number(p.price).toFixed(2)}</p>
         <a href="pdp.html?id=${p.id}">View</a>
       </div>
