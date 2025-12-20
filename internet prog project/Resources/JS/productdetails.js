@@ -52,7 +52,7 @@ function renderProduct(product, allProducts) {
     if (seen.has(src)) return; 
     seen.add(src);
     const img = document.createElement('img');
-    img.src = src;
+    img.src = src + "?id=" + product.id;
     img.className = 'thumb';
     img.onclick = () => { if(mainImg) mainImg.src = src; };
     if(thumbs) thumbs.appendChild(img);
@@ -85,7 +85,7 @@ function renderProduct(product, allProducts) {
       const card = document.createElement('div');
       card.className = 'related-card';
       card.innerHTML = `
-        <img src="${rp.image}" alt="${rp.name}">
+        <img src="${rp.image}?id=${rp.id} alt="${rp.name}">
         <h4>${rp.name}</h4>
         <div>$${Number(rp.price).toFixed(2)}</div>
         <a href="pdp.html?id=${rp.id}">View</a>

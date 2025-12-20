@@ -44,7 +44,7 @@ fetch(PRODUCTS_PATH)
 function createProductCard(product) {
   return `
     <div class="card">
-      <img src="${product.image}" alt="${product.name}">
+      <img src="${product.image}?id=${product.id}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p><strong>$${Number(product.price).toFixed(2)}</strong></p>
       <p style="font-size:12px;color:#666;">${product.category}</p>
