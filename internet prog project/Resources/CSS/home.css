@@ -179,6 +179,11 @@ body {
   transform: scale(1.05);
 }
 
+.hero-text button a{
+  text-decoration: none;
+  color: #e3bd5b;
+}
+
 footer {
   text-align: center;
   background-color: #121b42;
@@ -328,6 +333,15 @@ html {
   content: "";
   clear: both;
   display: table;
+}
+
+.container h2{
+  -webkit-text-stroke: 1px #e3bd5b;
+}
+
+.container a{
+  text-decoration: none;
+  color: white;
 }
 
 .title {
