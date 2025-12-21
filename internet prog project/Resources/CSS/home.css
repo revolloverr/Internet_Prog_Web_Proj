@@ -165,23 +165,19 @@ body {
   padding: 10px 20px;
 }
 
-.hero-text button {
+
+.hero-text a:hover {
+  background-color: #0d1433;
+  transform: scale(1.05);
+}
+
+.hero-text a{
   text-decoration: none;
   padding: 10px 20px;
   background-color: #121b42;
   color: #e3bd5b;
   border-radius: 4px;
   transition: background-color 0.25s ease, transform 0.2s ease;
-}
-
-.hero-text button:hover {
-  background-color: #0d1433;
-  transform: scale(1.05);
-}
-
-.hero-text button a{
-  text-decoration: none;
-  color: #e3bd5b;
 }
 
 footer {
